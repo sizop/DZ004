@@ -35,7 +35,6 @@ def s_num(num):  # Находим простые числа в диапазон�
 
 
 def division(number):
-    # number = int(input('Вводим число:'))
     simple_num = s_num(number)
     div_num = []
     for i in range(len(simple_num)):
