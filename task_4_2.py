@@ -18,3 +18,30 @@
 #
 # out
 # [2, 5, 5, 13]
+
+def s_num(num):  # Находим простые числа в диапазоне до ...
+    # num = int(input('До какого значения получаем  простые числа:'))
+
+    simple_number = []
+    for j in range(2, num):
+        count = 0
+        for i in range(2, j - 1):
+            if j % i == 0:
+                count += 1
+        if count == 0:
+            simple_number.append(j)
+    return simple_number
+    print(simple_number)
+
+
+def division(number):
+    # number = int(input('Вводим число:'))
+    simple_num = s_num(number)
+    div_num = []
+    for i in range(len(simple_num)):
+        if number % simple_num[i] == 0:
+            div_num.append(simple_num[i])
+    return div_num
+
+
+print(division(int(input('Вводим число:'))))
