@@ -33,7 +33,7 @@ with open("out.txt", "a+", encoding="utf-8") as my_f:
         i = 9
         while i > 1:
             if i == 7:
-                i-=1
+                i -= 1
                 continue
             formula += (randint(1, num)), ('*x^'), (i)
             i -= 1
@@ -46,5 +46,3 @@ with open("out.txt", "a+", encoding="utf-8") as my_f:
         convert = ''.join(map(str, formula))
         my_f.write(f'{convert}\n')
         print(f'{convert}\n')
-
-

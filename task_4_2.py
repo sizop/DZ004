@@ -19,12 +19,12 @@
 # out
 # [2, 5, 5, 13]
 
-def s_num(num):  # Находим простые числа в диапазоне до ...
+def s_num(num):  # простые числа в диапазоне до ...
 
     simple_number = []
     for j in range(2, num):
         count = 0
-        for i in range(2, j - 1):
+        for i in range(2, j):
             if j % i == 0:
                 count += 1
         if count == 0:
@@ -40,6 +40,5 @@ def division(number):
         if number % simple_num[i] == 0:
             div_num.append(simple_num[i])
     return div_num
-
 
 print(division(int(input('Вводим число:'))))
