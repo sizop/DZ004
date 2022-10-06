@@ -15,3 +15,17 @@
 #
 # out
 # The contents of the files do not match!
+
+def w_r(n):
+    # for i in range(n):
+    with open('out_1.txt', 'r') as my_f_1:
+        line_1 = my_f_1.readline()[:-4]
+    with open('out_2.txt', 'r') as my_f_2:
+        line_2 = my_f_2.readline()
+    return (f'{line_1}+ {line_2}')
+
+
+with open('out_3.txt', 'w') as my_f_3:
+    for i in range(int(3)):
+        print(w_r(i))
+        my_f_3.write(w_r(i))
