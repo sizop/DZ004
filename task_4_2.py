@@ -23,11 +23,11 @@ def s_num(num):  # простые числа в диапазоне до ...
 
     simple_number = []
     for j in range(2, num):
-        count = 0
+        cnt = 0
         for i in range(2, j):
-            if j % i == 0:
-                count += 1
-        if count == 0:
+            if not j % i:
+                cnt += 1
+        if cnt == 0:
             simple_number.append(j)
     return simple_number
     print(simple_number)
@@ -36,9 +36,8 @@ def s_num(num):  # простые числа в диапазоне до ...
 def division(number):
     simple_num = s_num(number)
     div_num = []
-    for i in range(len(simple_num)):
-        if number % simple_num[i] == 0:
-            div_num.append(simple_num[i])
+    div_num = [simple_num[i] for i in range(len(simple_num)) if not number % simple_num[i]]
     return div_num
+
 
 print(division(int(input('Вводим число:'))))

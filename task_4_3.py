@@ -25,7 +25,7 @@ import random
 def cr_nln():
     while True:
         try:
-            num = int(input('Введите размерность: '))
+            num = int(input('Введите размер списка: '))
             if num > 0:
                 list_num = [random.randint(-5, 5) for i in range(num)]
                 return list_num
