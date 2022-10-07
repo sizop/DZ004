@@ -21,7 +21,7 @@
 from decimal import Decimal
 
 number = input(str('Вводим число: '))
-raz = (input(str('Вводим разрядность в формате "1.0000": ')).replace('1','0'))
+raz = (input(str('Вводим разрядность: ')))
 number=Decimal(number)
 number = number.quantize(Decimal(raz))
 print(number)
